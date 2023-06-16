@@ -29,9 +29,16 @@ export default function Home() {
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
       >
         <a-assets>
-          <a-asset-item id="wolf" src="Wolf-Blender-2.82a.glb"></a-asset-item>
+          <a-asset-item
+            id="wolf"
+            src="https://ar-sample-tau.vercel.app/Wolf-Blender-2.82a.glb"
+          ></a-asset-item>
         </a-assets>
-        <a-marker preset="custom" type="pattern" url="pattern-marker.patt">
+        <a-marker
+          preset="custom"
+          type="pattern"
+          url="https://ar-sample-tau.vercel.app/pattern-marker.patt"
+        >
           <a-entity
             id="model"
             gltf-model="#wolf"
