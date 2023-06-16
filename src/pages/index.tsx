@@ -34,11 +34,7 @@ export default function Home() {
             src="https://ar-sample-tau.vercel.app/263.gltf"
           ></a-asset-item>
         </a-assets>
-        <a-marker
-          preset="custom"
-          type="pattern"
-          url="https://ar-sample-tau.vercel.app/pattern-logo_A_bg_white.patt"
-        >
+        <a-marker preset="custom" type="pattern" url="pattern-marker.patt">
           <a-entity
             id="model"
             gltf-model="#kitsune"
