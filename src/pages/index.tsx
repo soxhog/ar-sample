@@ -19,7 +19,7 @@ export default function Home() {
   //   }, []);
 
   return (
-    <div className="w-screen h-screen">
+    <div className=" m-0 overflow-hidden">
       {/* <Head>
         <title>AR Page</title>
         <meta name="description" content="AR Page" />
@@ -27,6 +27,7 @@ export default function Home() {
       <a-scene
         embedded
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        vr-mode-ui="enabled: false;"
       >
         <a-assets>
           <a-asset-item id="kitsune" src="263.gltf"></a-asset-item>
@@ -35,9 +36,9 @@ export default function Home() {
           <a-entity
             id="model"
             gltf-model="#kitsune"
-            position="0 0 1"
+            position="0 0 0"
             scale="1 1 1"
-            rotation="0 -90 60"
+            rotation="270 0 0"
           ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
