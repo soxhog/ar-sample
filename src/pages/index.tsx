@@ -19,7 +19,7 @@ export default function Home() {
   //   }, []);
 
   return (
-    <>
+    <div className="w-screen h-screen">
       {/* <Head>
         <title>AR Page</title>
         <meta name="description" content="AR Page" />
@@ -42,6 +42,6 @@ export default function Home() {
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
-    </>
+    </div>
   );
 }
