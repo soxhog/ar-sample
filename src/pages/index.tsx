@@ -29,12 +29,15 @@ export default function Home() {
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
       >
         <a-assets>
-          <a-asset-item id="kitsune" src="263.gltf"></a-asset-item>
+          <a-asset-item
+            id="kitsune"
+            src="https://ar-sample-tau.vercel.app/263.gltf"
+          ></a-asset-item>
         </a-assets>
         <a-marker
           preset="custom"
           type="pattern"
-          url="pattern-logo_A_bg_white.patt"
+          url="https://ar-sample-tau.vercel.app/pattern-logo_A_bg_white.patt"
         >
           <a-entity
             id="model"
