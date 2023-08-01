@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Valley: AR サンプル</title>
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+      <style>
+        model-viewer {
+            width: 100%;
+            height: 640px;
+          }
+        /* ARボタンに対するCSSを追加する */
+        .ar-button {
+          animation: blink-animation 1s steps(5, start) infinite;
+          font-size: 24px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        }
+      
+        @keyframes blink-animation {
+          to {
+            visibility: hidden;
+          }
+        }
+      </style>
+      <script>
+        window.addEventListener('load', function() {
+          /* model-viewerがロードされたらARボタンにクラスを追加 */
+          const modelViewer = document.querySelector('model-viewer');
+          const arButton = modelViewer.shadowRoot.querySelector('.ar-button');
+          arButton.classList.add('ar-button');
+        });
+      </script>
+  </head>
+  <body>
+    <model-viewer
+      src="./assets/Dress1-1.glb"
+      alt="A 3D model"
+      auto-rotate
+      camera-controls
+      ar
+      scale="0.05 0.05 0.05"
+    >
+    <button id="custom-ar-button" slot="ar-button" class="ar-button" onclick="">AR</button>
+    </model-viewer>
+    <script type="module">
+        document.querySelector('model-viewer').addEventListener('load', (event) => {
+            event.target.activateAR();
+        });
+      </script>
+  </body>
+</html>
